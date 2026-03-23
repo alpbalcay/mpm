@@ -1,0 +1,10 @@
+[package]
+name = "mpm-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+nalgebra.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+hashbrown.workspace = true

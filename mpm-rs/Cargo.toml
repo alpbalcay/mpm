@@ -1,0 +1,65 @@
+[workspace]
+members = [
+    "crates/mpm-core",
+    "crates/mpm-elements",
+    "crates/mpm-materials",
+    "crates/mpm-domain",
+    "crates/mpm-solver",
+    "crates/mpm-io",
+    "crates/mpm-contact",
+    "crates/mpm-bcs",
+    "crates/mpm-functions",
+]
+resolver = "2"
+
+[workspace.dependencies]
+nalgebra = "0.33"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+clap = { version = "4", features = ["derive"] }
+uuid = { version = "1", features = ["v4"] }
+rayon = "1"
+hashbrown = "0.15"
+approx = "0.5"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[package]
+name = "mpm"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "mpm"
+path = "src/main.rs"
+
+[dependencies]
+mpm-core = { path = "crates/mpm-core" }
+mpm-elements = { path = "crates/mpm-elements" }
+mpm-materials = { path = "crates/mpm-materials" }
+mpm-domain = { path = "crates/mpm-domain" }
+mpm-solver = { path = "crates/mpm-solver" }
+mpm-io = { path = "crates/mpm-io" }
+mpm-contact = { path = "crates/mpm-contact" }
+mpm-bcs = { path = "crates/mpm-bcs" }
+mpm-functions = { path = "crates/mpm-functions" }
+nalgebra.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+rayon.workspace = true
+thiserror.workspace = true
+
+[features]
+default = []
+mpi = ["mpm-domain/mpi", "mpm-solver/mpi"]
+vtk-output = ["mpm-io/vtk-output"]
+partio-output = ["mpm-io/partio-output"]

@@ -1,0 +1,21 @@
+[package]
+name = "mpm-domain"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mpm-core = { path = "../mpm-core" }
+mpm-elements = { path = "../mpm-elements" }
+mpm-materials = { path = "../mpm-materials" }
+mpm-bcs = { path = "../mpm-bcs" }
+mpm-functions = { path = "../mpm-functions" }
+nalgebra.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+rayon.workspace = true
+hashbrown.workspace = true
+
+[features]
+mpi = []

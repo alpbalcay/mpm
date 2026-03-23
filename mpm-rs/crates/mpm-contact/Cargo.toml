@@ -1,0 +1,11 @@
+[package]
+name = "mpm-contact"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mpm-core = { path = "../mpm-core" }
+mpm-domain = { path = "../mpm-domain" }
+nalgebra.workspace = true
+thiserror.workspace = true
+tracing.workspace = true

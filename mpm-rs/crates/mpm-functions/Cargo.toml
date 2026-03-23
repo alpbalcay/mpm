@@ -1,0 +1,10 @@
+[package]
+name = "mpm-functions"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mpm-core = { path = "../mpm-core" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

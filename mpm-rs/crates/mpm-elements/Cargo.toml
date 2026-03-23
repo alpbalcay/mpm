@@ -1,0 +1,13 @@
+[package]
+name = "mpm-elements"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mpm-core = { path = "../mpm-core" }
+nalgebra.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+approx.workspace = true

@@ -1,0 +1,11 @@
+[package]
+name = "mpm-bcs"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+mpm-core = { path = "../mpm-core" }
+mpm-functions = { path = "../mpm-functions" }
+nalgebra.workspace = true
+serde.workspace = true
+thiserror.workspace = true
